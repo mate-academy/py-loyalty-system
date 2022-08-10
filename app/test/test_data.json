@@ -1,0 +1,317 @@
+[
+    {
+        "model": "app.loyaltyprogram",
+        "pk": 1,
+        "fields": {"name": "Base level", "bonus_percentage": 5}
+    },
+    {
+        "model": "app.loyaltyprogram",
+        "pk": 2,
+        "fields": {"name": "Middle level", "bonus_percentage": 10}
+    },
+    {
+        "model": "app.loyaltyprogram",
+        "pk": 3,
+        "fields": {"name": "Gold level", "bonus_percentage": 20}
+    },
+    {
+        "model": "app.customer",
+        "pk": 1,
+        "fields": {
+            "first_name": "Ivan",
+            "last_name": "Ivanov",
+            "phone_number": "380666666666"
+        }
+    },
+    {
+        "model": "app.loyaltyprogramparticipant",
+        "pk": 1,
+        "fields": {
+            "last_activity": "1970-01-02",
+            "active_bonuses": 3,
+            "sum_of_spent_money": 12000,
+            "customer_id": 1,
+            "loyalty_program_id": 1
+        }
+    },
+    {
+        "model": "app.customer",
+        "pk": 2,
+        "fields": {
+            "first_name": "Alina",
+            "last_name": "Koval",
+            "phone_number": "380999999999"
+        }
+    },
+    {
+        "model": "app.loyaltyprogramparticipant",
+        "pk": 2,
+        "fields": {
+            "last_activity": "2012-09-09",
+            "active_bonuses": 100,
+            "sum_of_spent_money": 100,
+            "customer_id": 2,
+            "loyalty_program_id": 1
+        }
+    },
+    {
+        "model": "app.customer",
+        "pk": 3,
+        "fields": {
+            "first_name": "Mariia",
+            "last_name": "Marichna",
+            "phone_number": "380666752638"
+        }
+    },
+    {
+        "model": "app.loyaltyprogramparticipant",
+        "pk": 3,
+        "fields": {
+            "last_activity": "2022-01-01",
+            "active_bonuses": 1000,
+            "sum_of_spent_money": 1001,
+            "customer_id": 3,
+            "loyalty_program_id": 1
+        }
+    },
+    {
+        "model": "app.customer",
+        "pk": 4,
+        "fields": {
+            "first_name": "Alona",
+            "last_name": "Burga",
+            "phone_number": "380666728490"
+        }
+    },
+    {
+        "model": "app.loyaltyprogramparticipant",
+        "pk": 4,
+        "fields": {
+            "last_activity": "2021-09-01",
+            "active_bonuses": 2000,
+            "sum_of_spent_money": 2000,
+            "customer_id": 4,
+            "loyalty_program_id": 1
+        }
+    },
+    {
+        "model": "app.customer",
+        "pk": 5,
+        "fields": {
+            "first_name": "Dariia",
+            "last_name": "Kalinina",
+            "phone_number": "380667287392"
+        }
+    },
+    {
+        "model": "app.loyaltyprogramparticipant",
+        "pk": 5,
+        "fields": {
+            "last_activity": "2021-12-28",
+            "active_bonuses": 0,
+            "sum_of_spent_money": 0,
+            "customer_id": 5,
+            "loyalty_program_id": 1
+        }
+    },
+    {
+        "model": "app.customer",
+        "pk": 6,
+        "fields": {
+            "first_name": "Sasha",
+            "last_name": "Alekseev",
+            "phone_number": "380634393939"
+        }
+    },
+    {
+        "model": "app.loyaltyprogramparticipant",
+        "pk": 6,
+        "fields": {
+            "last_activity": "2022-04-28",
+            "active_bonuses": 12,
+            "sum_of_spent_money": 12,
+            "customer_id": 6,
+            "loyalty_program_id": 1
+        }
+    },
+    {
+        "model": "app.customer",
+        "pk": 7,
+        "fields": {
+            "first_name": "Lena",
+            "last_name": "Bondar",
+            "phone_number": "380636535353"
+        }
+    },
+    {
+        "model": "app.loyaltyprogramparticipant",
+        "pk": 7,
+        "fields": {
+            "last_activity": "2022-02-02",
+            "active_bonuses": 0,
+            "sum_of_spent_money": 100,
+            "customer_id": 7,
+            "loyalty_program_id": 1
+        }
+    },
+    {
+        "model": "app.customer",
+        "pk": 8,
+        "fields": {
+            "first_name": "Ivan",
+            "last_name": "Hryshko",
+            "phone_number": "380505555555"
+        }
+    },
+    {
+        "model": "app.loyaltyprogramparticipant",
+        "pk": 8,
+        "fields": {
+            "last_activity": "2022-02-09",
+            "active_bonuses": 2000,
+            "sum_of_spent_money": 2000,
+            "customer_id": 8,
+            "loyalty_program_id": 1
+        }
+    },
+    {
+        "model": "app.customer",
+        "pk": 9,
+        "fields": {
+            "first_name": "Oleksii",
+            "last_name": "Ivanov",
+            "phone_number": "380668966666"
+        }
+    },
+    {
+        "model": "app.loyaltyprogramparticipant",
+        "pk": 9,
+        "fields": {
+            "last_activity": "2019-02-09",
+            "active_bonuses": 90,
+            "sum_of_spent_money": 90,
+            "customer_id": 9,
+            "loyalty_program_id": 1
+        }
+    },
+    {
+        "model": "app.customer",
+        "pk": 10,
+        "fields": {
+            "first_name": "Ivan",
+            "last_name": "Litvin",
+            "phone_number": "380666602966"
+        }
+    },
+    {
+        "model": "app.loyaltyprogramparticipant",
+        "pk": 10,
+        "fields": {
+            "last_activity": "2019-02-09",
+            "active_bonuses": 90,
+            "sum_of_spent_money": 90,
+            "customer_id": 10,
+            "loyalty_program_id": 2
+        }
+    },
+    {
+        "model": "app.customer",
+        "pk": 11,
+        "fields": {
+            "first_name": "Vadim",
+            "last_name": "Kuhar",
+            "phone_number": "380766666666"
+        }
+    },
+    {
+        "model": "app.loyaltyprogramparticipant",
+        "pk": 11,
+        "fields": {
+            "last_activity": "2019-05-09",
+            "active_bonuses": 1000,
+            "sum_of_spent_money": 1090,
+            "customer_id": 11,
+            "loyalty_program_id": 2
+        }
+    },
+    {
+        "model": "app.customer",
+        "pk": 12,
+        "fields": {
+            "first_name": "Eduard",
+            "last_name": "Kanaryan",
+            "phone_number": "380666690906"
+        }
+    },
+    {
+        "model": "app.loyaltyprogramparticipant",
+        "pk": 12,
+        "fields": {
+            "last_activity": "2022-05-09",
+            "active_bonuses": 100,
+            "sum_of_spent_money": 100,
+            "customer_id": 12,
+            "loyalty_program_id": 2
+        }
+    },
+    {
+        "model": "app.customer",
+        "pk": 13,
+        "fields": {
+            "first_name": "Maksim",
+            "last_name": "Kravchenko",
+            "phone_number": "380669866666"
+        }
+    },
+    {
+        "model": "app.loyaltyprogramparticipant",
+        "pk": 13,
+        "fields": {
+            "last_activity": "2022-06-09",
+            "active_bonuses": 1005,
+            "sum_of_spent_money": 1006,
+            "customer_id": 13,
+            "loyalty_program_id": 2
+        }
+    },
+    {
+        "model": "app.customer",
+        "pk": 14,
+        "fields": {
+            "first_name": "Eleonora",
+            "last_name": "Ivanova",
+            "phone_number": "380666686666"
+        }
+    },
+    {
+        "model": "app.loyaltyprogramparticipant",
+        "pk": 14,
+        "fields": {
+            "last_activity": "2022-06-09",
+            "active_bonuses": 10059,
+            "sum_of_spent_money": 10059,
+            "customer_id": 14,
+            "loyalty_program_id": 2
+        }
+    },
+    {
+        "model": "app.customer",
+        "pk": 15,
+        "fields": {
+            "first_name": "Ivanna",
+            "last_name": "Kukushkina",
+            "phone_number": "38066666666"
+        }
+    },
+    {
+        "model": "app.loyaltyprogramparticipant",
+        "pk": 15,
+        "fields": {
+            "last_activity": "2021-11-09",
+            "active_bonuses": 100,
+            "sum_of_spent_money": 200,
+            "customer_id": 15,
+            "loyalty_program_id": 2
+        }
+    }
+]
