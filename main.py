@@ -1,4 +1,6 @@
-import init_django_orm
+from django.db.models import Q, F
+
+import init_django_orm  # noqa: F401
 
 from app.models import Customer, LoyaltyProgram, LoyaltyProgramParticipant
 
