@@ -1,6 +1,4 @@
-import init_django_orm
-
-from app.models import Customer, LoyaltyProgram, LoyaltyProgramParticipant
+import init_django_orm  # noqa: F401
 
 
 def all_loyalty_program_names():

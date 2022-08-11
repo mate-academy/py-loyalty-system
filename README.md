@@ -32,7 +32,7 @@ class LoyaltyProgramParticipant(models.Model):
     sum_of_spent_money = models.IntegerField(default=0)
 ```
 
-You can see mentioned models [here](app/models.py).
+You can see mentioned models [here](app/db/models.py).
 
 You have to make the following functions:
 
@@ -62,4 +62,4 @@ python manage.py makemigrations
 python manage.py migrate
 ```
 
-Implement the described task [here](main.py).
+Implement the described task [here](app/main.py).
