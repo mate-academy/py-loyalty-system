@@ -1,3 +1,6 @@
+import init_django_orm  # noqa: F401
+
+
 def all_loyalty_program_names():
     pass
 
