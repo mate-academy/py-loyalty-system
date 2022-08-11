@@ -1,22 +1,22 @@
 [
     {
-        "model": "app.loyaltyprogram",
         "pk": 1,
+        "model": "db.loyaltyprogram",
         "fields": {"name": "Base level", "bonus_percentage": 5}
     },
     {
-        "model": "app.loyaltyprogram",
         "pk": 2,
+        "model": "db.loyaltyprogram",
         "fields": {"name": "Middle level", "bonus_percentage": 10}
     },
     {
-        "model": "app.loyaltyprogram",
         "pk": 3,
+        "model": "db.loyaltyprogram",
         "fields": {"name": "Gold level", "bonus_percentage": 20}
     },
     {
-        "model": "app.customer",
         "pk": 1,
+        "model": "db.customer",
         "fields": {
             "first_name": "Ivan",
             "last_name": "Ivanov",
@@ -24,8 +24,8 @@
         }
     },
     {
-        "model": "app.loyaltyprogramparticipant",
         "pk": 1,
+        "model": "db.loyaltyprogramparticipant",
         "fields": {
             "last_activity": "1970-01-02",
             "active_bonuses": 3,
@@ -35,8 +35,8 @@
         }
     },
     {
-        "model": "app.customer",
         "pk": 2,
+        "model": "db.customer",
         "fields": {
             "first_name": "Alina",
             "last_name": "Koval",
@@ -44,8 +44,8 @@
         }
     },
     {
-        "model": "app.loyaltyprogramparticipant",
         "pk": 2,
+        "model": "db.loyaltyprogramparticipant",
         "fields": {
             "last_activity": "2012-09-09",
             "active_bonuses": 100,
@@ -55,8 +55,8 @@
         }
     },
     {
-        "model": "app.customer",
         "pk": 3,
+        "model": "db.customer",
         "fields": {
             "first_name": "Mariia",
             "last_name": "Marichna",
@@ -64,8 +64,8 @@
         }
     },
     {
-        "model": "app.loyaltyprogramparticipant",
         "pk": 3,
+        "model": "db.loyaltyprogramparticipant",
         "fields": {
             "last_activity": "2022-01-01",
             "active_bonuses": 1000,
@@ -75,8 +75,8 @@
         }
     },
     {
-        "model": "app.customer",
         "pk": 4,
+        "model": "db.customer",
         "fields": {
             "first_name": "Alona",
             "last_name": "Burga",
@@ -84,8 +84,8 @@
         }
     },
     {
-        "model": "app.loyaltyprogramparticipant",
         "pk": 4,
+        "model": "db.loyaltyprogramparticipant",
         "fields": {
             "last_activity": "2021-09-01",
             "active_bonuses": 2000,
@@ -95,8 +95,8 @@
         }
     },
     {
-        "model": "app.customer",
         "pk": 5,
+        "model": "db.customer",
         "fields": {
             "first_name": "Dariia",
             "last_name": "Kalinina",
@@ -104,8 +104,8 @@
         }
     },
     {
-        "model": "app.loyaltyprogramparticipant",
         "pk": 5,
+        "model": "db.loyaltyprogramparticipant",
         "fields": {
             "last_activity": "2021-12-28",
             "active_bonuses": 0,
@@ -115,8 +115,8 @@
         }
     },
     {
-        "model": "app.customer",
         "pk": 6,
+        "model": "db.customer",
         "fields": {
             "first_name": "Sasha",
             "last_name": "Alekseev",
@@ -124,8 +124,8 @@
         }
     },
     {
-        "model": "app.loyaltyprogramparticipant",
         "pk": 6,
+        "model": "db.loyaltyprogramparticipant",
         "fields": {
             "last_activity": "2022-04-28",
             "active_bonuses": 12,
@@ -135,8 +135,8 @@
         }
     },
     {
-        "model": "app.customer",
         "pk": 7,
+        "model": "db.customer",
         "fields": {
             "first_name": "Lena",
             "last_name": "Bondar",
@@ -144,8 +144,8 @@
         }
     },
     {
-        "model": "app.loyaltyprogramparticipant",
         "pk": 7,
+        "model": "db.loyaltyprogramparticipant",
         "fields": {
             "last_activity": "2022-02-02",
             "active_bonuses": 0,
@@ -155,8 +155,8 @@
         }
     },
     {
-        "model": "app.customer",
         "pk": 8,
+        "model": "db.customer",
         "fields": {
             "first_name": "Ivan",
             "last_name": "Hryshko",
@@ -164,8 +164,8 @@
         }
     },
     {
-        "model": "app.loyaltyprogramparticipant",
         "pk": 8,
+        "model": "db.loyaltyprogramparticipant",
         "fields": {
             "last_activity": "2022-02-09",
             "active_bonuses": 2000,
@@ -175,8 +175,8 @@
         }
     },
     {
-        "model": "app.customer",
         "pk": 9,
+        "model": "db.customer",
         "fields": {
             "first_name": "Oleksii",
             "last_name": "Ivanov",
@@ -184,8 +184,8 @@
         }
     },
     {
-        "model": "app.loyaltyprogramparticipant",
         "pk": 9,
+        "model": "db.loyaltyprogramparticipant",
         "fields": {
             "last_activity": "2019-02-09",
             "active_bonuses": 90,
@@ -195,8 +195,8 @@
         }
     },
     {
-        "model": "app.customer",
         "pk": 10,
+        "model": "db.customer",
         "fields": {
             "first_name": "Ivan",
             "last_name": "Litvin",
@@ -204,8 +204,8 @@
         }
     },
     {
-        "model": "app.loyaltyprogramparticipant",
         "pk": 10,
+        "model": "db.loyaltyprogramparticipant",
         "fields": {
             "last_activity": "2019-02-09",
             "active_bonuses": 90,
@@ -215,8 +215,8 @@
         }
     },
     {
-        "model": "app.customer",
         "pk": 11,
+        "model": "db.customer",
         "fields": {
             "first_name": "Vadim",
             "last_name": "Kuhar",
@@ -224,8 +224,8 @@
         }
     },
     {
-        "model": "app.loyaltyprogramparticipant",
         "pk": 11,
+        "model": "db.loyaltyprogramparticipant",
         "fields": {
             "last_activity": "2019-05-09",
             "active_bonuses": 1000,
@@ -235,8 +235,8 @@
         }
     },
     {
-        "model": "app.customer",
         "pk": 12,
+        "model": "db.customer",
         "fields": {
             "first_name": "Eduard",
             "last_name": "Kanaryan",
@@ -244,8 +244,8 @@
         }
     },
     {
-        "model": "app.loyaltyprogramparticipant",
         "pk": 12,
+        "model": "db.loyaltyprogramparticipant",
         "fields": {
             "last_activity": "2022-05-09",
             "active_bonuses": 100,
@@ -255,8 +255,8 @@
         }
     },
     {
-        "model": "app.customer",
         "pk": 13,
+        "model": "db.customer",
         "fields": {
             "first_name": "Maksim",
             "last_name": "Kravchenko",
@@ -264,8 +264,8 @@
         }
     },
     {
-        "model": "app.loyaltyprogramparticipant",
         "pk": 13,
+        "model": "db.loyaltyprogramparticipant",
         "fields": {
             "last_activity": "2022-06-09",
             "active_bonuses": 1005,
@@ -275,8 +275,8 @@
         }
     },
     {
-        "model": "app.customer",
         "pk": 14,
+        "model": "db.customer",
         "fields": {
             "first_name": "Eleonora",
             "last_name": "Ivanova",
@@ -284,8 +284,8 @@
         }
     },
     {
-        "model": "app.loyaltyprogramparticipant",
         "pk": 14,
+        "model": "db.loyaltyprogramparticipant",
         "fields": {
             "last_activity": "2022-06-09",
             "active_bonuses": 10059,
@@ -295,8 +295,8 @@
         }
     },
     {
-        "model": "app.customer",
         "pk": 15,
+        "model": "db.customer",
         "fields": {
             "first_name": "Ivanna",
             "last_name": "Kukushkina",
@@ -304,8 +304,8 @@
         }
     },
     {
-        "model": "app.loyaltyprogramparticipant",
         "pk": 15,
+        "model": "db.loyaltyprogramparticipant",
         "fields": {
             "last_activity": "2021-11-09",
             "active_bonuses": 100,
