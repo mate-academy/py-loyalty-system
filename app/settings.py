@@ -17,4 +17,4 @@ DATABASES = {
 
 USE_TZ = False
 
-INSTALLED_APPS = ("app",)
+INSTALLED_APPS = ("db", )
