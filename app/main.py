@@ -1,8 +1,3 @@
-import init_django_orm  # noqa: F401
-
-from db.models import Customer, LoyaltyProgram, LoyaltyProgramParticipant
-
-
 def all_loyalty_program_names():
     pass
 
