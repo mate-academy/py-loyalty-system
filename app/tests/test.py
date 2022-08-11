@@ -11,7 +11,11 @@ from main import (
 @pytest.mark.django_db
 def test_all_loyalty_program_names(django_db_setup):
     result = all_loyalty_program_names()
-    assert list(result) == [("Base level", 5), ("Middle level", 10), ("Gold level", 20)]
+    assert list(result) == [
+        ("Base level", 5), 
+        ("Middle level", 10), 
+        ("Gold level", 20)
+    ]
 
 
 @pytest.mark.django_db
