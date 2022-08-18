@@ -32,7 +32,7 @@ class LoyaltyProgramParticipant(models.Model):
     sum_of_spent_money = models.IntegerField(default=0)
 ```
 
-You can see mentioned models [here](app/db/models.py).
+You can see mentioned models [here](db/models.py).
 
 You have to make the following functions:
 
