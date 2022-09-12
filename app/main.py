@@ -6,35 +6,27 @@ from django.db.models import Q, F
 
 
 def all_loyalty_program_names():
-    list = []
-    loyalty_program_names = LoyaltyProgram.objects.all()
-    for programs in loyalty_program_names:
-        list.append((programs.name, programs.bonus_percentage))
-    return list
+
+    return LoyaltyProgram.objects.all().values_list("name", "bonus_percentage")
 
 
 def not_active_customers():
     not_active_customers = \
         LoyaltyProgramParticipant.objects.filter(
             last_activity__gt="2021-01-01",
-            last_activity__lt="2022-01-01")
-    list = []
-    for i in not_active_customers:
-        list.append({"customer__first_name": i.customer.first_name})
-    return list
+            last_activity__lt="2022-01-01").values("customer__first_name")
+
+    return not_active_customers
 
 
 def most_active_customers():
-    list = []
-    not_active_customers = LoyaltyProgramParticipant.objects.all()
-    not_active_customers = LoyaltyProgramParticipant.objects.order_by(
-        '-sum_of_spent_money')[0:5]
-    for i in not_active_customers:
-        list.append((i.customer.first_name,
-                     i.customer.last_name,
-                     i.sum_of_spent_money))
+    most_active_customers = LoyaltyProgramParticipant.objects.all()
+    most_active_customers = LoyaltyProgramParticipant.objects.order_by(
+        '-sum_of_spent_money')[0:5].values_list("customer__first_name",
+                                                "customer__last_name",
+                                                "sum_of_spent_money")
 
-    return list
+    return most_active_customers
 
 
 def clients_with_i_and_k():
@@ -47,8 +39,6 @@ def clients_with_i_and_k():
 
 def bonuses_less_then_spent_money():
     bonuses_less_then_spent_money = LoyaltyProgramParticipant.objects.filter(
-        active_bonuses__lt=F("sum_of_spent_money"))
-    list = []
-    for i in bonuses_less_then_spent_money:
-        list.append({"customer__phone_number": i.customer.phone_number})
-    return list
+        active_bonuses__lt=F("sum_of_spent_money")).values(
+        "customer__phone_number")
+    return bonuses_less_then_spent_money
