@@ -29,7 +29,8 @@ def most_active_customers():
 
 def clients_with_i_and_k():
     return Customer.objects.filter(Q(
-        first_name__startswith="I") | Q(last_name__contains="o"))
+        first_name__startswith="I") | Q(
+        last_name__contains="o"))
 
 
 def bonuses_less_then_spent_money():
