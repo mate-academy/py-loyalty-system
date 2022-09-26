@@ -19,6 +19,7 @@ def test_all_loyalty_program_names(django_db_setup):
 @pytest.mark.django_db
 def test_not_active_customers(django_db_setup):
     result = not_active_customers()
+    print(result)
     assert list(result) == [
         {"customer__first_name": "Alona"},
         {"customer__first_name": "Dariia"},
