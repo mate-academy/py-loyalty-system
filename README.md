@@ -48,7 +48,7 @@ This function returns all names of loyalty participants who were active in the p
 
 This function returns names, last names and the sum of sent money 5 of the most active customers - persons who spent the biggest amount of money.
 
-4. **`def  clients_with_i_and_k()`**
+4. **`def  clients_with_i_and_o()`**
 
 This function returns all customers whose name starts at “I” or the last name contains “o”.
 
