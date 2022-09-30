@@ -13,7 +13,7 @@ def most_active_customers():
     pass
 
 
-def clients_with_i_and_k():
+def clients_with_i_and_o():
     pass
 
 
