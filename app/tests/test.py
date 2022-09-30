@@ -39,8 +39,8 @@ def test_most_active_customers(django_db_setup):
 
 
 @pytest.mark.django_db
-def test_clients_with_i_and_k(django_db_setup):
-    result = clients_with_i_and_k()
+def test_clients_with_i_and_o(django_db_setup):
+    result = clients_with_i_and_o()
     assert result.count() == 9
 
 
