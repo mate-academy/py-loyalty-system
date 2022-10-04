@@ -3,8 +3,9 @@ from app.main import (
     all_loyalty_program_names,
     not_active_customers,
     most_active_customers,
-    clients_with_i_and_k,
+    # clients_with_i_and_k,
     bonuses_less_then_spent_money,
+    clients_with_i_and_o,
 )
 
 
