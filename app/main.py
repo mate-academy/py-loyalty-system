@@ -29,7 +29,7 @@ def clients_with_i_and_o() -> QuerySet:
     )
 
 
-def bonuses_less_then_spent_money() -> QuerySet:
+def bonuses_less_then_spent_money():
     return LoyaltyProgramParticipant.objects.all(). \
         filter(active_bonuses__lt=F("sum_of_spent_money")). \
         values("customer__phone_number")
