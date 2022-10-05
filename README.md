@@ -42,7 +42,7 @@ This function returns all names and bonus percentages of existing loyalty progra
 
 2. **`def not_active_customers()`**
 
-This function returns all names of loyalty participants who were active in the period from 2021-01-01 to 2022-01-01.
+This function returns all first names of loyalty participants who were active in the period from 2021-01-01 to 2022-01-01.
 
 3. **`def most_active_customers()`**
 
