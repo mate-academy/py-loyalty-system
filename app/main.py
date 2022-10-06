@@ -18,11 +18,6 @@ def not_active_customers():
         last_activity__date__gte=start,
         last_activity__date__lte=end).values(
         "customer")
-    # return LoyaltyProgramParticipant.objects.all().values_list(
-    #     "customer__first_name"
-    # ).filter(
-    #     Q(last_activity__gte="2021-01-01") & Q(last_activity__lt="2022-01-01")
-    # ).values("customer__first_name")
 
 
 def most_active_customers():
