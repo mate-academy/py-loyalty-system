@@ -1,8 +1,6 @@
-import datetime
-
 import init_django_orm  # noqa: F401
 
-from django.db.models import F
+from django.db.models import F, Q
 
 from db.models import LoyaltyProgram, LoyaltyProgramParticipant, Customer
 
@@ -13,12 +11,9 @@ def all_loyalty_program_names():
 
 
 def not_active_customers():
-    start = datetime.date(2021, 1, 1)
-    end = datetime.date(2022, 1, 1)
     return LoyaltyProgramParticipant.objects.filter(
-        last_activity__date__gte=start,
-        last_activity__date__lte=end).values(
-        "customer")
+        Q(last_activity__gt="2021-01-01") & Q(last_activity__lt="2022-01-01")
+    ).values("customer__first_name")
 
 
 def most_active_customers():
@@ -31,7 +26,8 @@ def most_active_customers():
 
 def clients_with_i_and_o():
     return Customer.objects.filter(
-        first_name__startswith="I", last_name__contains="o")
+        Q(first_name__startswith="I") | Q(last_name__contains="o")
+    )
 
 
 def bonuses_less_then_spent_money():
