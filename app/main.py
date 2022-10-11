@@ -4,8 +4,6 @@ from db.models import LoyaltyProgram, LoyaltyProgramParticipant
 from datetime import datetime
 from django.db.models import F, Q
 
-from django.db.models import QuerySet
-
 
 def all_loyalty_program_names() -> QuerySet:
     query = LoyaltyProgram.objects.filter().values_list(
@@ -40,7 +38,7 @@ def clients_with_i_and_o() -> QuerySet:
     return query
 
 
-def bonuses_less_then_spent_money():
+def bonuses_less_then_spent_money() -> QuerySet:
     query = LoyaltyProgramParticipant.objects.filter(
         active_bonuses__lt=F("sum_of_spent_money")
     ).values("customer__phone_number")
