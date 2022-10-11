@@ -4,9 +4,9 @@ import os
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # SECURITY WARNING: Modify this secret key if using in production!
-SECRET_KEY = 'django-$*5c$rx$u1q8rsfm@j3$=*^9jr@+85678#k-=rwvw'
+SECRET_KEY = "django-$*5c$rx$u1q8rsfm@j3$=*^9jr@+85678#k-=rwvw"
 
-DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
+DEFAULT_AUTO_FIELD = "django.db.models.AutoField"
 
 DATABASES = {
     "default": {

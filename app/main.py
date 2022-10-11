@@ -4,6 +4,8 @@ from db.models import LoyaltyProgram, LoyaltyProgramParticipant
 from datetime import datetime
 from django.db.models import F, Q
 
+from django.db.models import QuerySet
+
 
 def all_loyalty_program_names() -> QuerySet:
     query = LoyaltyProgram.objects.filter().values_list(
