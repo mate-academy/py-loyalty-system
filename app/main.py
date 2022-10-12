@@ -16,8 +16,6 @@ def not_active_customers() -> QuerySet:
 
 
 def most_active_customers() -> QuerySet:
-    # I understand that it's shorter to use LoyaltyProgramParticipant here,
-    # but the README says "customers".
     return (
         LoyaltyProgramParticipant.objects.all()
         .order_by("-sum_of_spent_money")
