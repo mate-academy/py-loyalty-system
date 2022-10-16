@@ -21,7 +21,7 @@ def not_active_customers() -> QuerySet:
 
 def most_active_customers() -> QuerySet:
     return LoyaltyProgramParticipant.objects.order_by(
-        -F("sum_of_spent_money")).values_list(
+        "-sum_of_spent_money").values_list(
         "customer__first_name", "customer__last_name",
         "sum_of_spent_money"
     )[:5]
