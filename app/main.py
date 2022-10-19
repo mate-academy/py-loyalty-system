@@ -7,29 +7,6 @@ from django.db.models import QuerySet, F, Q
 from db.models import LoyaltyProgramParticipant, Customer, LoyaltyProgram
 
 
-def make_data() -> None:
-    with open("test_data.json", "r") as file_in:
-        data = json.load(file_in)
-
-    for field in data:
-        if field["model"] == "db.loyaltyprogram":
-            LoyaltyProgram.objects.create(
-                name=field["fields"]["name"],
-                bonus_percentage=field["fields"]["bonus_percentage"])
-        if field["model"] == "db.customer":
-            Customer.objects.create(
-                first_name=field["fields"]["first_name"],
-                last_name=field["fields"]["last_name"],
-                phone_number=field["fields"]["phone_number"])
-        if field["model"] == "db.loyaltyprogramparticipant":
-            LoyaltyProgramParticipant.objects.create(
-                last_activity=field["fields"]["last_activity"],
-                active_bonuses=field["fields"]["active_bonuses"],
-                sum_of_spent_money=field["fields"]["sum_of_spent_money"],
-                customer_id=field["fields"]["customer_id"],
-                loyalty_program_id=field["fields"]["loyalty_program_id"])
-
-
 def all_loyalty_program_names() -> QuerySet:
     return LoyaltyProgram.objects.all().values_list("name", "bonus_percentage")
 
