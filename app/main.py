@@ -10,13 +10,13 @@ from db.models import Customer
 
 def all_loyalty_program_names() -> QuerySet:
 
-    return LoyaltyProgram.objects.all().values_list("name", "bonus_percentage")
+    return LoyaltyProgram.objects.values_list("name", "bonus_percentage")
 
 
 def not_active_customers() -> QuerySet:
 
     return LoyaltyProgramParticipant.objects.filter(
-        last_activity__range=("2021-01-01", "2021-12-31")
+        last_activity__year=2021
     ).values("customer__first_name")
 
 
