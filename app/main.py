@@ -15,8 +15,7 @@ def all_loyalty_program_names() -> QuerySet:
 
 def not_active_customers() -> QuerySet:
     return LoyaltyProgramParticipant.objects.filter(
-        last_activity__lt="2022-01-01",
-        last_activity__gt="2021-01-01"
+        last_activity__year=2021
     ).values("customer__first_name")
 
 
@@ -32,7 +31,7 @@ def most_active_customers() -> QuerySet:
 
 def clients_with_i_and_o() -> QuerySet:
     return Customer.objects.filter(
-        Q(first_name__startswith="I") | Q(last_name__icontains="o")
+        Q(first_name__startswith="I") | Q(last_name__contains="o")
     )
 
 
