@@ -10,7 +10,9 @@ def all_loyalty_program_names() -> QuerySet:
 
 
 def not_active_customers() -> QuerySet:
-    return LoyaltyProgramParticipant.objects.filter(last_activity__year="2021").values(
+    return LoyaltyProgramParticipant.objects.filter(
+        last_activity__year="2021"
+    ).values(
         "customer__first_name",
     )
 
@@ -25,7 +27,8 @@ def most_active_customers() -> QuerySet:
 
 
 def clients_with_i_and_o() -> QuerySet:
-    return Customer.objects.filter(Q(first_name__startswith="I") | Q(last_name__icontains="o"))
+    return Customer.objects.filter(Q(
+        first_name__startswith="I") | Q(last_name__icontains="o"))
 
 
 def bonuses_less_then_spent_money() -> QuerySet:
