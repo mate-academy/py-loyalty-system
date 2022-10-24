@@ -1,8 +1,7 @@
 import init_django_orm  # noqa: F401
 
-from db.models import LoyaltyProgram, LoyaltyProgramParticipant
-from django.db.models import QuerySet
-from django.db.models import F, Q
+from db.models import Customer, LoyaltyProgram, LoyaltyProgramParticipant
+from django.db.models import QuerySet, F, Q
 
 
 def all_loyalty_program_names() -> QuerySet:
@@ -26,9 +25,9 @@ def most_active_customers() -> QuerySet:
 
 
 def clients_with_i_and_o() -> QuerySet:
-    return LoyaltyProgramParticipant.objects.filter(
-        Q(customer__first_name__startswith="I")
-        | Q(customer__last_name__contains="o")
+    return Customer.objects.filter(
+        Q(first_name__startswith="I")
+        | Q(last_name__contains="o")
     )
 
 
