@@ -6,7 +6,7 @@ from db.models import LoyaltyProgram, LoyaltyProgramParticipant, Customer
 
 
 def all_loyalty_program_names() -> QuerySet:
-    return LoyaltyProgram.objects.all().values_list(
+    return LoyaltyProgram.objects.values_list(
         "name", "bonus_percentage"
     )
 
