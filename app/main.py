@@ -1,6 +1,7 @@
 import init_django_orm  # noqa: F401
 
 from django.db.models import QuerySet, Q, F
+
 from db.models import Customer, LoyaltyProgram, LoyaltyProgramParticipant
 
 
