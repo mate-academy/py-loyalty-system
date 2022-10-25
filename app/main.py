@@ -16,13 +16,15 @@ def all_loyalty_program_names() -> QuerySet:
 
 def not_active_customers() -> QuerySet:
     return LoyaltyProgramParticipant.objects.filter(
-        (Q(last_activity__gt="2021-01-01") & Q(last_activity__lt="2022-01-01"))
+        last_activity__gt="2021-01-01",
+        last_activity__lt="2022-01-01"
     ).values("customer__first_name")
 
 
 def most_active_customers() -> QuerySet:
-    return LoyaltyProgramParticipant.objects.all(
-    ).order_by("-sum_of_spent_money").values_list(
+    return LoyaltyProgramParticipant.objects.order_by(
+        "-sum_of_spent_money"
+    ).values_list(
         "customer__first_name",
         "customer__last_name",
         "sum_of_spent_money"
