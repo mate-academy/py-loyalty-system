@@ -18,5 +18,5 @@ class LoyaltyProgramParticipant(models.Model):
         LoyaltyProgram,
         on_delete=models.PROTECT)
     last_activity = models.DateField(auto_now=True)
-    active_bonuses = models.IntegerField(default=0, null=True, blank=True)
+    active_bonuses = models.IntegerField(default=0, blank=True, null=True)
     sum_of_spent_money = models.IntegerField(default=0)
