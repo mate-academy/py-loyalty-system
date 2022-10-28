@@ -1,5 +1,3 @@
-from datetime import datetime
-
 import init_django_orm  # noqa: F401
 
 from django.db.models import QuerySet, Q, F
@@ -8,13 +6,12 @@ from db.models import Customer, LoyaltyProgram, LoyaltyProgramParticipant
 
 
 def all_loyalty_program_names() -> QuerySet:
-    return LoyaltyProgram.objects.all().values_list("name", "bonus_percentage")
+    return LoyaltyProgram.objects.values_list("name", "bonus_percentage")
 
 
 def not_active_customers() -> QuerySet:
     return LoyaltyProgramParticipant.objects.filter(
-        last_activity__range=(datetime.strptime("2021-01-01", "%Y-%m-%d"),
-                              datetime.strptime("2021-12-31", "%Y-%m-%d"))
+        last_activity__year=2021
     ).values("customer__first_name")
 
 
