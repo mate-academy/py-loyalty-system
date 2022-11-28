@@ -62,4 +62,4 @@ python manage.py makemigrations
 python manage.py migrate
 ```
 
-Implement the described task [here](app/main.py).
+Implement the described task [here](db/queries.py).

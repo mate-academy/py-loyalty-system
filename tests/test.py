@@ -1,5 +1,5 @@
 import pytest
-from app.main import (
+from db.queries import (
     all_loyalty_program_names,
     not_active_customers,
     most_active_customers,
