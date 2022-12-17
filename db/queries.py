@@ -11,11 +11,13 @@ def all_loyalty_program_names() -> QuerySet:
 
 
 def not_active_customers() -> QuerySet:
-    query = LoyaltyProgramParticipant.objects.all()
     dt1 = datetime.date(2021, 1, 1)
     dt2 = datetime.date(2022, 1, 1)
-    name_list = query.filter(last_activity__gt=dt1, last_activity__lt=dt2)
-    return name_list.values("customer__first_name")
+
+    query = LoyaltyProgramParticipant.objects.filter(
+        last_activity__gt=dt1,
+        last_activity__lt=dt2)
+    return query.values("customer__first_name")
 
 
 def most_active_customers() -> QuerySet:
@@ -31,6 +33,6 @@ def clients_with_i_and_o() -> QuerySet:
 
 
 def bonuses_less_then_spent_money() -> QuerySet:
-    all_customers = LoyaltyProgramParticipant.objects.all()
-    filtered = all_customers.filter(active_bonuses__lt=F("sum_of_spent_money"))
-    return filtered.values("customer__phone_number")
+    all_cust = LoyaltyProgramParticipant.objects.filter(
+        active_bonuses__lt=F("sum_of_spent_money"))
+    return all_cust.values("customer__phone_number")
