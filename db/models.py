@@ -15,8 +15,8 @@ class LoyaltyProgram(models.Model):
 class LoyaltyProgramParticipant(models.Model):
     customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
     loyalty_program = models.ForeignKey(
-        LoyaltyProgram,
-        on_delete=models.PROTECT)
+        LoyaltyProgram, on_delete=models.PROTECT
+    )
     last_activity = models.DateField(auto_now=True)
     active_bonuses = models.IntegerField(default=0, null=True, blank=True)
     sum_of_spent_money = models.IntegerField(default=0)
