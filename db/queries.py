@@ -9,11 +9,8 @@ def all_loyalty_program_names() -> QuerySet:
 
 
 def not_active_customers() -> QuerySet:
-    start_date = "2021-01-01"
-    end_date = "2022-01-01"
     return LoyaltyProgramParticipant.objects.filter(
-        last_activity__gt=start_date,
-        last_activity__lt=end_date
+        last_activity__year="2021"
     ).values("customer__first_name")
 
 
