@@ -6,7 +6,10 @@ from db.models import LoyaltyProgram, LoyaltyProgramParticipant, Customer
 
 
 def all_loyalty_program_names() -> QuerySet:
-    return LoyaltyProgram.objects.filter().values_list("name", "bonus_percentage")
+    return LoyaltyProgram.objects.filter().values_list(
+        "name",
+        "bonus_percentage"
+    )
 
 
 def not_active_customers() -> QuerySet:
@@ -18,7 +21,9 @@ def not_active_customers() -> QuerySet:
 
 
 def most_active_customers() -> QuerySet:
-    return LoyaltyProgramParticipant.objects.all().order_by("-sum_of_spent_money").values_list(
+    return LoyaltyProgramParticipant.objects.all().order_by(
+        "-sum_of_spent_money"
+    ).values_list(
         "customer__first_name",
         "customer__last_name",
         "sum_of_spent_money"
@@ -27,8 +32,7 @@ def most_active_customers() -> QuerySet:
 
 def clients_with_i_and_o() -> QuerySet:
     return Customer.objects.filter(
-        Q(first_name__startswith="I") |
-        Q(last_name__contains="o")
+        Q(first_name__startswith="I") | Q(last_name__contains="o")
     )
 
 
