@@ -16,9 +16,11 @@ def not_active_customers() -> QuerySet:
 
 def most_active_customers() -> QuerySet:
     top5_active_customers = LoyaltyProgramParticipant.objects.all().order_by(
-        "-sum_of_spent_money")[:5]
+        "-sum_of_spent_money"
+    )[:5]
     return top5_active_customers.values_list(
-        "customer__first_name", "customer__last_name", "sum_of_spent_money")
+        "customer__first_name", "customer__last_name", "sum_of_spent_money"
+    )
 
 
 def clients_with_i_and_o() -> QuerySet:
