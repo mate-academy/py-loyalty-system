@@ -4,7 +4,7 @@ from django.db.models import QuerySet, Q, F
 
 
 def all_loyalty_program_names() -> QuerySet:
-    return LoyaltyProgram.objects.all().values_list("name", "bonus_percentage")
+    return LoyaltyProgram.objects.values_list("name", "bonus_percentage")
 
 
 def not_active_customers() -> QuerySet:
@@ -14,7 +14,7 @@ def not_active_customers() -> QuerySet:
 
 
 def most_active_customers() -> QuerySet:
-    return LoyaltyProgramParticipant.objects.all().order_by(
+    return LoyaltyProgramParticipant.objects.order_by(
         "-sum_of_spent_money"
     ).values_list(
         "customer__first_name",
