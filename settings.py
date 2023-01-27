@@ -18,6 +18,5 @@ DATABASES = {
 USE_TZ = False
 
 INSTALLED_APPS = (
-    "db",
-    "django_extensions"
+    "db"
 )
