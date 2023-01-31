@@ -18,7 +18,8 @@ def not_active_customers() -> QuerySet:
 
 def most_active_customers() -> QuerySet:
     return LoyaltyProgramParticipant.objects.order_by(
-        "-sum_of_spent_money").values_list(
+        "-sum_of_spent_money"
+    ).values_list(
         "customer__first_name", "customer__last_name", "sum_of_spent_money"
     )[:5]
 
@@ -33,4 +34,6 @@ def clients_with_i_and_o() -> QuerySet:
 def bonuses_less_then_spent_money() -> QuerySet:
     return LoyaltyProgramParticipant.objects.filter(
         active_bonuses__lt=F("sum_of_spent_money")
-    ).values("customer__phone_number")
+    ).values(
+        "customer__phone_number"
+    )
