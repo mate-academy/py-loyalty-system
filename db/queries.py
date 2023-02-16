@@ -5,7 +5,7 @@ from db.models import Customer, LoyaltyProgram, LoyaltyProgramParticipant
 
 
 def all_loyalty_program_names() -> QuerySet:
-    return LoyaltyProgram.objects.all().values_list("name", "bonus_percentage")
+    return LoyaltyProgram.objects.values_list("name", "bonus_percentage")
 
 
 def not_active_customers() -> QuerySet:
