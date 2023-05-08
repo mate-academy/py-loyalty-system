@@ -11,6 +11,9 @@ class LoyaltyProgram(models.Model):
     name = models.CharField(max_length=64)
     bonus_percentage = models.IntegerField()
 
+    def __str__(self) -> str:
+        return f"{self.name}: {self.bonus_percentage}"
+
 
 class LoyaltyProgramParticipant(models.Model):
     customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
